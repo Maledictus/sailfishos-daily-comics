@@ -1,0 +1,19 @@
+{
+  "plugins": [
+    {
+      "id":"beetlebailey",
+      "stripSource":"https://www.comicskingdom.com/beetle-bailey-1/",
+      "extractJson":"function(page) {\r\n    var regex = \/<meta property=\"og:image\" content=\"([^\"]*)\"\/\r\n    var match = regex.exec(page);\r\n    return match[1].replace(\/&amp;\/g, '&');\r\n}"
+    },
+    {
+      "id":"dennisthemenace",
+      "stripSource":"https://www.comicskingdom.com/dennis-the-menace",
+      "extractJson":"function(page) {\r\n    var regex = \/<meta property=\"og:image\" content=\"([^\"]*)\"\/\r\n    var match = regex.exec(page);\r\n    return match[1].replace(\/&amp;\/g, '&');\r\n}"
+    },
+    {
+      "id":"ccassandra",
+      "stripSource":"https://tapas.io/series/CassandraComics",
+      "extractJson":"function(page){var regex=\/<img class=\"art-image\".+?src=\"([^\"]*)\"\/;\r\nvar match=regex.exec(text);return match[1];}"
+    }
+  ]
+}

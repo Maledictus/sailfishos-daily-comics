@@ -13,7 +13,7 @@
     {
       "id":"ccassandra",
       "stripSource":"https://tapas.io/series/CassandraComics",
-      "extractJson":"function(page){var regex=\/<img class=\"art-image\".+?src=\"([^\"]*)\"\/;\r\nvar match=regex.exec(page);return match[1];}"
+      "extractJson":"function(page){var regex=\/<img class=\"art-image\"(.|\s)*?src=\"([^\"]*)\"\/;\r\nvar match=regex.exec(page);return match[1];}"
     }
   ]
 }
